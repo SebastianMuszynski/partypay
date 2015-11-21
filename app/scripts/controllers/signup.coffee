@@ -7,6 +7,7 @@ angular.module('partypay').controller 'SignUpCtrl', ($scope, $http, ENV, $locati
 
   $scope.signup = ->
     $http.post(ENV.apiEndpoint + "/signup", $scope.user)
+      console.log $scope.user
       .success (user) ->
         console.log user
         $scope.error = false

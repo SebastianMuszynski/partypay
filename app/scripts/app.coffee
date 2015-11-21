@@ -13,6 +13,8 @@ angular
         controller:   'MainCtrl'
       .when '/signup',
         templateUrl:  'views/signup.html'
+      .when '/customer',
+        templateUrl:  'views/customer/index.html'
       .otherwise
         redirectTo: '/login'
 

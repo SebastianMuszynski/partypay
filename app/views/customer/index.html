@@ -1,0 +1,11 @@
+<div class="background-img"></div>
+<header>
+  <div class="logo"><span>party</span>PAY</div>
+  <div class="logged-in-msg">Logged in as: <span class="bold">Sebastian</span></div>
+  <div class="btn logout-btn">Log out</div>
+</header>
+<div class="money-info" ng-controller="CustomerCtrl">
+  <p>Money on your account:</p>
+  <p class="bold">£{{ amount }}</p>
+  <div class="btn topup-btn" ng-click="topup()">Top up</div>
+</div>

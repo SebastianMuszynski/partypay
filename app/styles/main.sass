@@ -34,3 +34,41 @@ body
 .bold
   font-weight: bold
 
+header
+  background-color: rgba(0,0,0,.6)
+  border-bottom: 2px solid #A31A48
+  position: absolute
+  top:      0
+  left:     0
+  right:    0
+  width:    100vw
+  height:   100px
+  font-size: 40px
+  text-align: left
+  animation: change-color 0 linear 3s
+
+  .logo
+    position: relative
+    font-weight: 600
+    top:  20px
+    left: 100px
+    display: inline-block
+    cursor: pointer
+
+  .logged-in-msg
+    font-size: 18px
+    font-style: italic
+    position: absolute
+    top:   38px
+    right: 250px
+
+    span
+      font-style: normal
+      margin-left: 10px
+
+  .logout-btn
+    font-size: 16px
+    position: absolute
+    top:   0
+    right: -10px
+    border-radius: 0 0 0 5px
