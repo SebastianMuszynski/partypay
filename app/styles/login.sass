@@ -1,25 +1,28 @@
 .title
+  color: white
   display: inline-block
+  background-color: rgba(0,0,0,0.7)
+  width: 100%
+  padding: 10px 0 25px
   position: absolute
-  top: 20%
+  top: 15%
   left: 50%
   transform: translateX(-50%) translateY(-50%)
   text-align: center
-  font-size: 150px
+  font-size: 130px
   opacity: 0
-  text-shadow: 2px 5px black
-  animation: enter-title 1s ease-out 1s 1
+  animation: enter-title 2s ease-out 1s 1
   animation-fill-mode: forwards
 
 @keyframes enter-title
   to
     opacity: 1
-    top: 25%
+    top: 20%
 
 .login
   position: absolute
   display: inline-block
-  top:  50%
+  top:  60%
   left: 50%
   transform: translateX(-50%) translateY(-50%)
   opacity: 0
@@ -34,10 +37,16 @@
     opacity: 1
 
 .or-signup
-  position: absolute
   display: inline-block
-  bottom: 50px
-  left:   50%
-  transform: translateX(-50%) translateY(-50%)
+  background-color: rgba(219,36,100,0.5)
+  padding: 20px
+  width: 100%
+  border-radius: 0 0 10px 10px
   p
+    margin-top:    10px
     margin-bottom: 20px
+
+.error-msg
+  background-color: #A31A48
+  padding:          5px 10px
+  border-radius:    4px
