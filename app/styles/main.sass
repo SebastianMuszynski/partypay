@@ -1,5 +1,41 @@
-// bower:scss
+// bower:sass
 // endbower
+
+*
+  margin:  0
+  padding: 0
+
+body
+  color: white
+  font-family: 'Open Sans', sans-serif
+
+.background-img
+  position: absolute
+  top:      0
+  left:     0
+  right:    0
+  bottom:   0
+  width:    100vw
+  height:   100vh
+  z-index:  -1
+  background: url(../images/bg-img-party.jpg) no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size:    cover
+  -o-background-size:      cover
+  background-size:         cover
 
 .bold
   font-weight: bold
+
+.title
+  margin-top: 5vw
+  text-align: center
+  text-shadow: 5px 5px 0 rgba(0,0,0,.5)
+  font-size: 10vw
+  opacity: 0
+  animation: enter-title 1s ease-out 1s 1
+  animation-fill-mode: forwards
+
+@keyframes enter-title
+  to
+    opacity: 1
