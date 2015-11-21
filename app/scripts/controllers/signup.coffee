@@ -1,12 +1,12 @@
 'use strict'
 
-angular.module('partypay').controller 'LoginCtrl', ($scope, $http, ENV, $location) ->
+angular.module('partypay').controller 'SignUpCtrl', ($scope, $http, ENV, $location) ->
 
   $scope.user  = {}
   $scope.error = false
 
-  $scope.login = ->
-    $http.post(ENV.apiEndpoint + "/login", $scope.user)
+  $scope.signup = ->
+    $http.post(ENV.apiEndpoint + "/signup", $scope.user)
       .success (user) ->
         console.log user
         $scope.error = false
@@ -14,5 +14,5 @@ angular.module('partypay').controller 'LoginCtrl', ($scope, $http, ENV, $locatio
         console.log data.error
         $scope.error = true
 
-  $scope.goToSignUp = ->
-    $location.path "/signup"
+  $scope.goToLogIn = ->
+    $location.path "/login"

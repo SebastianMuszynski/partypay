@@ -8,10 +8,11 @@ angular
   ]
   .config ($routeProvider) ->
     $routeProvider
-      .when '/',
+      .when '/login',
         templateUrl:  'views/main.html'
         controller:   'MainCtrl'
-        controllerAs: 'main'
+      .when '/signup',
+        templateUrl:  'views/signup.html'
       .otherwise
-        redirectTo: '/'
+        redirectTo: '/login'
 

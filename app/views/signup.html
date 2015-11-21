@@ -1,14 +1,15 @@
 <div class="background-img"></div>
 <h1 class="title">partyPAY</h1>
-<div class="login" ng-controller="LoginCtrl">
+<div class="login" ng-controller="SignUpCtrl">
   <form novalidate>
     <div ng-show="error" class="error-msg">We're sorry, but there's no such user. Please, try again.</div>
     <input type="email"    ng-model="user.email"    placeholder="E-mail" />
     <input type="password" ng-model="user.password" placeholder="Password" />
-    <div ng-click="login()" class="btn">Log in</div>
+    <input type="password" ng-model="user.password_confirmatuon" placeholder="Password confirmation" />
+    <div ng-click="login()" class="btn">Sign up</div>
   </form>
   <div class="or-signup">
-    <p>Don't you have an account yet?</p>
-    <div class="btn" ng-click="goToSignUp()">Sign up</div>
+    <p>Have you already got an account?</p>
+    <div class="btn" ng-click="goToLogIn()">Log in</div>
   </div>
 </div>
