@@ -1,9 +1,13 @@
 <div class="background-img"></div>
-<h1 class="title">PartyPAY</h1>
+<h1 class="title">partyPAY</h1>
 <div class="login" ng-controller="LoginCtrl">
   <form novalidate>
     <input type="email"    ng-model="user.email"    placeholder="E-mail" />
     <input type="password" ng-model="user.password" placeholder="Password" />
-    <input type="submit" ng-click="login()" value="Log in" />
+    <div ng-click="login()" class="btn">Log in</div>
   </form>
+</div>
+<div class="or-signup">
+  <p>Don't you have an account yet?</p>
+  <div class="btn">Sign up</div>
 </div>
