@@ -9,6 +9,8 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn'
   });
 
+  grunt.loadNpmTasks('grunt-contrib-compass');
+
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
     dist: 'dist'
@@ -455,6 +457,8 @@ module.exports = function (grunt) {
     'connect:test',
     'karma'
   ]);
+
+  grunt.registerTask('heroku', ['build']);
 
   grunt.registerTask('build', [
     'clean:dist',
