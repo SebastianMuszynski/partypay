@@ -1,0 +1,32 @@
+form
+  input
+    font-size: 20px
+    padding: 15px 10px
+    border-radius: 5px
+    display: block
+    margin: 25px 0
+
+.login
+  width: 380px
+  margin: 80px auto 0
+  opacity: 0
+  animation: enter-title 1s ease-out 1.5s 1
+  animation-fill-mode: forwards
+  input
+    width: 100%
+    border: none
+  input[type=submit]
+    border: 0
+    background: none
+    background-color: white
+    font-weight: bold
+    cursor: pointer
+    width: 60%
+    margin: 50px auto 0
+    transition: .3s all
+  input[type=submit]:hover
+    width: 100%
+
+@keyframes enter-title
+  to
+    opacity: 1
