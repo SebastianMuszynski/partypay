@@ -2,7 +2,8 @@
 
 angular
   .module 'partypay', [
-    'ngResource',
+    'config'
+    'ngResource'
     'ngRoute'
   ]
   .config ($routeProvider) ->
