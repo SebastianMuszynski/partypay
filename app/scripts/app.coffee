@@ -5,6 +5,7 @@ angular
     'config'
     'ngResource'
     'ngRoute'
+    'ngCookies'
   ]
   .config ($routeProvider) ->
     $routeProvider
@@ -17,8 +18,6 @@ angular
         templateUrl:  'views/customer/index.html'
       .when '/topup',
         templateUrl:  'views/customer/topup.html'
-      .when '/vender',
-        templateUrl:  'views/vender/index.html'
       .otherwise
         redirectTo: '/login'
 

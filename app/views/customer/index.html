@@ -1,11 +1,22 @@
 <div class="background-img"></div>
-<header>
-  <a href="/"><div class="logo"><span>party</span>PAY</div></a>
-  <div class="logged-in-msg">Logged in as: <span class="bold">Sebastian</span></div>
-  <a href="/"><div class="btn logout-btn">Log out</div></a>
-</header>
-<div class="money-info" ng-controller="CustomerCtrl">
-  <p>Money on your account:</p>
-  <p class="bold">£{{ amount }}</p>
-  <div class="btn topup-btn" ng-click="goToTopUp()">Top up</div>
+<div ng-controller="CustomerCtrl">
+  <header>
+    <a href="/"><div class="logo"><span>party</span>PAY</div></a>
+    <div class="logged-in-msg">Logged in as: <span class="bold">{{ user.email }}</span></div>
+    <div class="btn logout-btn" ng-click="logout()">Log out</div>
+  </header>
+  <div class="money-info" ng-hide="showTopUpBox">
+    <p>Money on your account:</p>
+    <p class="bold">£{{ user.amount }}</p>
+    <div ng-if="user">
+      <div class="btn topup-btn" ng-click="goToTopUp()">Top up</div>
+    </div>
+  </div>
+  <div class="money-info" ng-show="showTopUpBox">
+    <p>How much money would you like to top up?</p>
+    <input type="text" placeholder="Amount" ng-model="toppedAmount" />
+    <div ng-if="user">
+      <div class="btn topup-btn" ng-click="topup(toppedAmount)">Top up</div>
+    </div>
+  </div>
 </div>
