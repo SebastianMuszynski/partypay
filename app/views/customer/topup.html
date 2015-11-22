@@ -5,7 +5,7 @@
   <a href="/"><div class="btn logout-btn">Log out</div></a>
 </header>
 <div class="money-info" ng-controller="CustomerCtrl">
-  <p>Money on your account:</p>
-  <p class="bold">£{{ amount }}</p>
-  <div class="btn topup-btn" ng-click="goToTopUp()">Top up</div>
+  <p>How much money would you like to top up?</p>
+  <input type="text" placeholder="Amount" ng-model="toppedAmount" />
+  <div class="btn topup-btn" ng-click="topup()">Top up</div>
 </div>

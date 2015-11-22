@@ -15,6 +15,8 @@ angular
         templateUrl:  'views/signup.html'
       .when '/customer',
         templateUrl:  'views/customer/index.html'
+      .when '/topup',
+        templateUrl:  'views/customer/topup.html'
       .otherwise
         redirectTo: '/login'
 

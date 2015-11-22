@@ -10,6 +10,7 @@ angular.module('partypay').controller 'LoginCtrl', ($scope, $http, ENV, $locatio
       .success (user) ->
         console.log user
         $scope.error = false
+        $location.path "/customer"
       .error (data) ->
         console.log data.error
         $scope.error = true
